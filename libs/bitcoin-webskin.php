@@ -251,6 +251,41 @@ class BitcoinWebskin {
 				); 
 				return 'move'; break;				
 
+
+                          case 'sendescrow':
+
+                                $this->open_wallet(); 			
+
+                                $this->escrowaddrs = $this->get_get('escrowaddrs', '');                   
+                                $this->amount = $this->get_get('amount', '');
+                                $this->ok = $this->get_get('ok', '0');
+
+                                $this->debug("escrowaddrs:$this->escrowaddrs amount:$this->amount ok:$this->ok");
+
+				if( $this->escrowaddrs && $this->amount && $this->ok ) { 
+
+					$this->debug("Sending escrow");
+
+					$this->sendescrow = $this->wallet->sendescrow(
+                                                (string) $this->escrowaddrs,											
+						(float)  $this->amount,				
+						(string) $this->get_get('comment', ''),					
+						(string) $this->get_get('comment_to', '')					
+					); 
+				}
+
+				return 'sendescrow'; break;
+
+                        case 'redeemescrow':
+				$this->open_wallet(); 			
+				$this->redeemescrow = $this->wallet->redeemescrow(
+					(string) $this->get_get('inputtx', ''),					
+					(string) $this->get_get('address', ''),					
+					(string)  $this->get_get('txhex', '')													
+				); 
+				return 'redeemescrow'; break;
+
+
 			case 'getinfo': 
 				$this->open_wallet(); 
 				$this->getinfo = @$this->info; 
