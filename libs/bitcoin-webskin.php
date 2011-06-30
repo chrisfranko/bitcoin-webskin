@@ -23,7 +23,6 @@ class BitcoinWebskin {
 
 	public function __construct() {
 		$this->wallet_is_open = false;
-		//$this->skin = 'debug';
 		$this->skin = 'simple';
 		$this->template( $this->get_template() );		
 	}
