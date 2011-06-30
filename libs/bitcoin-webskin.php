@@ -5,7 +5,7 @@
 */
 
 if( !file_exists('config.php') ) { 
-	$msg = "Can not find Starup file 'config.php'"; 
+	$msg = "Can not find Startup file 'config.php'"; 
 	include 'skins/simple/fatal.error.php'; 
 	exit; 
 }
