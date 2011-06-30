@@ -15,11 +15,11 @@ require_once 'config.php';
 
 class BitcoinWebskin {
 
-	public $debug = 1;		// Debug notices  1=on  0=off
+	public $debug = 1;  // Debug notices  1=on  0=off
 	
 	private $wallet_is_open; // Current status of wallet connection   true/false
 	
-	private $a;	// Current action
+	private $a; // Current action
 
 	public function __construct() {
 		$this->wallet_is_open = false;
@@ -32,6 +32,8 @@ class BitcoinWebskin {
 		$this->a = $this->get_get('a', 'home');
 		
 		switch( $this->a ) {
+
+			case 'about': return 'about'; break;
 
 			case 'home': 
 				$this->open_wallet();

@@ -5,23 +5,21 @@
 */
 ?><?php $this->template('header'); ?>
 
-<p>
-<a href="#accounts">accounts</a> |
-<a href="#transactions">transactions</a> |
-<a href="#addresses">addresses</a> |
-<a href="#sending">sending</a> |
-<a href="#server">server</a> |
-<a href="#namecoin">namecoin</a> |
-<a href="#webskin">webskin</a> 
-</p>	
+<p><a href="./?a=about">About Bitcoin Webskin</a></p>
 
-<p>
-Tests:
-<br /><a href="./?a=listtransactions">List All Transactions</a>
-<br /><a href="./?a=getinfo">Get Info</a>
-<br /><a href="./?a=mtgox">MtGox market data</a>
-<br /><a href="./?a=server.control">Server Control</a>
-</p>
+<p><a href="./?a=listtransactions&account=*&count=20">Last 20 Transactions</a>
+<br /><a href="./?a=listtransactions&account=*&count=-1">All Transactions</a></p>
+
+<p><a href="./?a=sendtoaddress">Send Coins to Address</a></p>
+
+<p><a href="./?a=getinfo">Get Info</a></p>
+
+<p><a href="./?a=server.control">Server Control</a></p>
+
+
+<p><a href="#accounts">accounts</a> | <a href="#transactions">transactions</a> 
+| <a href="#addresses">addresses</a> | <a href="#sending">sending</a> | <a href="#server">server</a> 
+| <a href="#namecoin">namecoin</a> | <a href="#webskin">webskin</a> </p>	
 
 <hr /><a name="accounts">Accounts</a>
 
@@ -217,7 +215,10 @@ Tests:
 
 <a href="./?a=name_clean">name_clean</a>
 
-	
+
+<hr />misc:
+
+<br /><a href="./?a=mtgox">MtGox market data</a>
 <form action="./" method="GET">
 <input type="hidden" name="a" value="deletetransaction"><input type="submit" value="deletetransaction">
 	txid:<input type="text" name="txid" value="" size="68">
