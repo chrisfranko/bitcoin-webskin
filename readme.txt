@@ -59,6 +59,7 @@ Making a new skin:
 - edit the template PHP files in /skins/YOUR.NEW.SKIN/ 
   for your desired design
 
+
 ---------------------------------------------------------------------
 Making a new bitcoin interface:
 
