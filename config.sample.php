@@ -14,7 +14,6 @@ define('PORT',     	'8332');
 
 define('SERVER_NETWORK', 'Bitcoin');     // Display name of the network
 
-
 // Windows Localhost Server
 
 define('SERVER_LOCALHOST', 		true);   // is server on localhost? true / false
