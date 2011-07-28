@@ -1,6 +1,6 @@
 Bitcoin Webskin 
 
-an open source PHP web interface to bitcoind
+an open source PHP web interface to bitcoind and namecoind
 
 Copyright (c) 2011 14STzHS8qjsDPtqpQgcnwWpTaSHadgEewS
 
